@@ -40,12 +40,14 @@ function JsonLd({ data }) { return <script type="application/ld+json" dangerousl
 function Seo({ route, children }) {
   const canonical = `${packageInfo.domain}${route.path}`;
   const parts = route.path.split('/').filter(Boolean);
-  const breadcrumb = parts.map((part, i, a) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: part.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
-    item: `${packageInfo.domain}/${a.slice(0, i + 1).join('/')}/`
-  }));
+  const breadcrumb = route.path === '/' 
+  ? null 
+  : parts.map((part, i, a) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: part.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+      item: `${packageInfo.domain}/${a.slice(0, i + 1).join('/')}/`
+    }));
   const searchAction = {
     '@type': 'SearchAction',
     target: `${packageInfo.domain}/search/?q={search_term_string}`,
@@ -69,7 +71,7 @@ function Seo({ route, children }) {
       author: { '@type': 'Person', name: 'RJRYT', url: packageInfo.authorUrl },
       isPartOf: { '@id': `${packageInfo.domain}#website` }
     },
-    { '@type': 'BreadcrumbList', itemListElement: breadcrumb }
+    ...(breadcrumb ? [{ '@type': 'BreadcrumbList', itemListElement: breadcrumb }] : [])
   ];
   if (route.path === '/') {
     graph.unshift({
