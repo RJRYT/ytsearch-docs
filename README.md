@@ -1,83 +1,218 @@
 # ytsearch.js Documentation
 
-SEO-focused documentation site for **ytsearch.js**, built with React, Vite, Tailwind CSS and React SSR prerendering for GitHub Pages.
+Official documentation website for **[ytsearch.js](https://github.com/RJRYT/ytsearch.js)** — a YouTube search library for Node.js and TypeScript.
 
-## Stack
+🌐 **Documentation:** [https://ytsearch.rjryt.com](https://ytsearch.rjryt.com)
 
-- React + Vite
-- Tailwind CSS
-- React DOM `renderToString` prerendering
-- Static route generation for GitHub Pages
-- Zero icon-library dependency; the small required SVG icons are embedded locally
-- Responsive light/dark documentation UI
+📦 **npm:** [https://www.npmjs.com/package/ytsearch.js](https://www.npmjs.com/package/ytsearch.js)
 
-## Routes
+🐙 **Package Repository:** [https://github.com/RJRYT/ytsearch.js](https://github.com/RJRYT/ytsearch.js)
 
-- `/` — product/documentation landing page
-- `/docs/` — getting started and conceptual documentation
-- `/api/` — API reference
-- `/types/` — TypeScript types
-- `/errors/` — errors and error codes
-- `/guides/` — SEO-oriented developer guides
-- `/examples/` — copy-paste examples
-- `/changelog/` — release history
-- `/search/?q=...` — client-side documentation search
+---
 
-The search route is intentionally `noindex` and excluded from the sitemap. Canonical documentation pages are indexable.
+## About
 
-## SEO
+**ytsearch-docs** is the public documentation website for the ytsearch.js project.
 
-Each prerendered route receives:
+The website provides developers with a clear and organized reference for using ytsearch.js, including:
 
-- unique `<title>`
-- unique meta description
-- canonical URL
-- robots metadata
-- Open Graph metadata
-- Twitter metadata
-- JSON-LD `WebPage` / `TechArticle`
-- `BreadcrumbList`
-- homepage `WebSite` + `SearchAction`
-- homepage `SoftwareApplication`
-- search-page `SearchResultsPage`
+- Getting started documentation
+- Installation instructions
+- Search API documentation
+- Playlist API documentation
+- Video details
+- TypeScript types
+- Error handling
+- Usage examples
+- Developer guides
+- Changelog and release history
 
-The search schema targets:
+The documentation is designed to make it easy to discover, understand, and use ytsearch.js.
 
-`https://ytsearch.rjryt.com/search/?q={search_term_string}`
+---
 
-This lets the documentation expose a stable search URL format to search engines and users. Search-engine support for structured search actions is controlled by the search engine itself.
+## Documentation
 
-## Build
+The documentation is organized into several sections.
+
+### Getting Started
+
+Learn the basics of ytsearch.js and get your first project running.
+
+- Installation
+- Quick Start
+- Search basics
+- Working with results
+
+### API Reference
+
+Detailed reference for the public APIs provided by ytsearch.js.
+
+- YouTube search
+- Playlist items
+- Video details
+- Search options
+- Pagination
+- API result structures
+
+### Types
+
+Reference for the TypeScript types exported by ytsearch.js.
+
+This includes types for search options, results, playlists, videos, metadata, and other public interfaces.
+
+### Errors
+
+Learn about errors returned by ytsearch.js and how to handle them in your applications.
+
+### Guides
+
+Practical guides covering common use cases and workflows with ytsearch.js.
+
+### Examples
+
+Copy-friendly examples showing how to use ytsearch.js in JavaScript and TypeScript projects.
+
+### Changelog
+
+Follow the development history of ytsearch.js and see what changed between releases.
+
+---
+
+## Features
+
+The documentation website provides:
+
+- 📚 Organized documentation hierarchy
+- 🔎 Documentation search
+- 📱 Responsive design
+- 🌙 Dark and light themes
+- 💻 Syntax-highlighted code examples
+- ⬅️ Previous and next page navigation
+- 🔗 Cross-linked documentation
+- 🧭 Breadcrumb navigation
+- 🔍 Search-engine friendly pages
+- 📄 Search-engine structured data
+- 🗺️ XML sitemap
+- 🤖 Robots configuration
+- ⚡ Prerendered documentation pages
+
+The documentation is designed to work well on desktop, tablet, and mobile devices.
+
+---
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/RJRYT/ytsearch-docs.git
+cd ytsearch-docs
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Production build + SSR prerender:
+The documentation website will then be available locally.
+
+---
+
+## Building
+
+Create a production build with:
 
 ```bash
 npm run build
 ```
 
-The prerender step generates:
+The build generates the production website and prerendered documentation pages.
 
-- static `index.html` files for every documented route
-- `404.html`
-- `sitemap.xml`
-- `robots.txt`
+The generated site can be deployed to a static hosting provider such as GitHub Pages.
 
-## GitHub Pages
+---
 
-The repository includes `.github/workflows/deploy.yml` for GitHub Pages deployment and `public/CNAME` for:
+## Deployment
 
-`ytsearch.rjryt.com`
+The documentation website is hosted using **GitHub Pages** and is available through the custom domain:
 
-Configure the repository's GitHub Pages source to **GitHub Actions**, then configure the DNS record for the custom domain.
+**https://ytsearch.rjryt.com**
 
-## Project links
+The project includes the configuration required for the custom documentation domain and static deployment.
 
-- Developer: https://rjryt.com/
-- Support: https://rjryt.com/contact/
-- GitHub: https://github.com/RJRYT/ytsearch.js
-- npm: https://www.npmjs.com/package/ytsearch.js
+---
+
+## Contributing
+
+Contributions and improvements to the documentation are welcome.
+
+If you find:
+
+- Incorrect documentation
+- Missing examples
+- Broken links
+- Typographical errors
+- Unclear explanations
+- Missing API information
+
+please open an issue or submit a pull request.
+
+Before making significant documentation changes, please make sure the information matches the current **ytsearch.js** API.
+
+---
+
+## Related Projects
+
+### ytsearch.js
+
+The main package that powers the project.
+
+**Repository:**  
+https://github.com/RJRYT/ytsearch.js
+
+**npm:**  
+https://www.npmjs.com/package/ytsearch.js
+
+### Developer
+
+ytsearch.js and its documentation are maintained by **RJRYT**.
+
+**Website:**  
+https://rjryt.com
+
+**Contact:**  
+https://rjryt.com/contact
+
+---
+
+## License
+
+This documentation project follows the licensing terms included in this repository.
+
+For the license of the **ytsearch.js package itself**, see the package repository:
+
+https://github.com/RJRYT/ytsearch.js
+
+---
+
+<p align="center">
+  Documentation for <strong>ytsearch.js</strong>
+</p>
+
+<p align="center">
+  <a href="https://ytsearch.rjryt.com">Documentation</a>
+  ·
+  <a href="https://github.com/RJRYT/ytsearch.js">GitHub</a>
+  ·
+  <a href="https://www.npmjs.com/package/ytsearch.js">npm</a>
+  ·
+  <a href="https://rjryt.com">RJRYT</a>
+</p>
