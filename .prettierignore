@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+*.local
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated files
+*.md
+
+# Vite
+vite.config.js.timestamp-*
+.vite/
+
+# Misc
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

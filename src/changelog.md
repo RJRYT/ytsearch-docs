@@ -93,11 +93,7 @@ Introduced flat type exports to improve the TypeScript developer experience whil
 All public types are now explicitly exported from the main entry point, so TypeScript users can import them without using deep import paths.
 
 ```ts
-import type {
-  SearchResult,
-  VideoResult,
-  PlaylistDetailsResult
-} from "ytsearch.js";
+import type { SearchResult, VideoResult, PlaylistDetailsResult } from 'ytsearch.js';
 ```
 
 ### Exported types
@@ -344,7 +340,7 @@ Also introduced the `FormatVideoObject` utility with safe parsing for consistent
 Added:
 
 ```ts
-formatDuration()
+formatDuration();
 ```
 
 Converts seconds into a human-readable duration.
@@ -358,7 +354,7 @@ Example:
 Added:
 
 ```ts
-formatPublishedDate()
+formatPublishedDate();
 ```
 
 Converts ISO date strings into friendly, human-readable dates.
@@ -551,7 +547,7 @@ Playlist results include:
 Added:
 
 ```ts
-type
+type;
 ```
 
 Supports:
@@ -563,7 +559,7 @@ Supports:
 Added:
 
 ```ts
-sort
+sort;
 ```
 
 Supports:
@@ -576,7 +572,7 @@ Supports:
 Added:
 
 ```ts
-limit
+limit;
 ```
 
 Controls the maximum number of returned results.
@@ -634,7 +630,7 @@ This release marked the migration to an ESM-first architecture.
 CommonJS users remain supported through:
 
 ```js
-require()
+require();
 ```
 
 [View v1.2.1 release](https://github.com/RJRYT/ytsearch.js/releases/tag/v1.2.1)
@@ -643,21 +639,21 @@ require()
 
 ## Release history
 
-| Version | Release date | Major focus |
-| --- | --- | --- |
-| `v2.1.3` | 22 Sep 2026 | Full changelog comparison |
-| `v2.1.2` | 15 Sep 2026 | npm discoverability, SEO documentation, dependency updates |
-| `v2.1.1` | 14 Sep 2026 | YouTube playlist structure and pagination fixes |
-| `v2.1.0` | 26 Sep 2026 | Flat TypeScript exports |
-| `v2.0.0` | 25 Sep 2026 | Breaking search and playlist API redesign |
-| `v1.5.3` | 22 Sep 2026 | Movie and live search |
-| `v1.5.1` | 19 Sep 2026 | Video-details error handling |
-| `v1.5.0` | 18 Sep 2026 | Video details API |
-| `v1.4.3` | 17 Sep 2026 | Pagination, sorting, errors, TypeScript improvements |
-| `v1.4.0` | 13 Sep 2026 | TypeScript migration and `SearchYt` |
-| `v1.3.0` | 11 Sep 2026 | Channel and playlist search |
-| `v1.2.2` | 10 Sep 2026 | Full changelog comparison |
-| `v1.2.1` | 10 Sep 2026 | ESM-first migration |
+| Version  | Release date | Major focus                                                |
+| -------- | ------------ | ---------------------------------------------------------- |
+| `v2.1.3` | 22 Sep 2026  | Full changelog comparison                                  |
+| `v2.1.2` | 15 Sep 2026  | npm discoverability, SEO documentation, dependency updates |
+| `v2.1.1` | 14 Sep 2026  | YouTube playlist structure and pagination fixes            |
+| `v2.1.0` | 26 Sep 2026  | Flat TypeScript exports                                    |
+| `v2.0.0` | 25 Sep 2026  | Breaking search and playlist API redesign                  |
+| `v1.5.3` | 22 Sep 2026  | Movie and live search                                      |
+| `v1.5.1` | 19 Sep 2026  | Video-details error handling                               |
+| `v1.5.0` | 18 Sep 2026  | Video details API                                          |
+| `v1.4.3` | 17 Sep 2026  | Pagination, sorting, errors, TypeScript improvements       |
+| `v1.4.0` | 13 Sep 2026  | TypeScript migration and `SearchYt`                        |
+| `v1.3.0` | 11 Sep 2026  | Channel and playlist search                                |
+| `v1.2.2` | 10 Sep 2026  | Full changelog comparison                                  |
+| `v1.2.1` | 10 Sep 2026  | ESM-first migration                                        |
 
 ---
 
